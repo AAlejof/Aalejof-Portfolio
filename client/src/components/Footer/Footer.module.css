@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+/* ---------DESKTOP & TABLET--------- */
+@media (min-width: 451px) {
+    .footerDiv {
+        margin: 0;
+        left:0;
+        display: flex;
+        justify-content: left;
+        align-items: end;
+        width: 100vw;
+        background-color: white;
+        border-top: solid 0.5px #a4a4a4;
+    }
+
+    .pFooterDiv {
+        height: 60px;
+        margin-right: 2%;
+        padding-left: 1.5rem;
+        color: #000000;
+        font-family: 'Montserrat';
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.2px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+/* ---------MOBILE--------- */
+@media (max-width: 450px) {
+    .footerDiv {
+        margin: 0;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-end;
+        height: 101.33px;
+        width: 100vw;
+        background-color: white;
+        border-bottom: solid 0.5px #a4a4a4;
+    }
+
+    .pFooterDiv {
+        height: 43.33px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -0.2px;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}

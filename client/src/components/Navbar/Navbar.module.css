@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+/* ---------DESKTOP & TABLET--------- */
+@media (min-width: 451px) {
+    .navbarDiv {
+        margin: 0;
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* align-content: flex-end; */
+        height: 15vh;
+        width: 100vw;
+        background-color: white;
+        border-bottom: solid 0.5px #a4a4a4;
+    }
+
+    .pNavbarDiv {
+        height: 43.33px;
+        color: #000;
+        font-family: 'Montserrat';
+        font-size: 70px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        letter-spacing: -0.2px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+/* ---------MOBILE--------- */
+@media (max-width: 450px) {
+    .navbarDiv {
+        margin: 0;
+        position: fixed;
+        top: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-end;
+        height: 101.33px;
+        width: 100vw;
+        background-color: white;
+        border-bottom: solid 0.5px #a4a4a4;
+    }
+
+    .pNavbarDiv {
+        height: 43.33px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -0.2px;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
