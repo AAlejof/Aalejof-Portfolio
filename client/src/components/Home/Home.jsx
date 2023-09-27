@@ -19,11 +19,12 @@ const Home = () => {
                         Also, I'm certified as English C2 Proficient (EF set certificate), intermediate in French and native in Spanish.
                     </p>
                     <p>
-                        Currently I'm Working in the Visual Arts Department of the National University of the Arts as Head of the Office of Council and Commissions, having staff in charge and coordinating the sessions of the co-governance body as well as writing its opinions and resolutions. At the same time, I have my own legal practice as lawyer with all that it entails: dealing with clients, drafting and presentation of pleadings and lawsuits, procedures with public and private entities.
+                        Currently, besides being a freelance dev, I'm also working  in the Visual Arts Department of the National University of the Arts as Head of the Office of Council and Commissions, having staff in charge and coordinating the sessions of the co-governance body as well as writing its opinions and resolutions. At the same time, I have my own legal practice as lawyer with all that it entails: dealing with clients, drafting and presentation of pleadings and lawsuits, procedures with public and private entities.
                     </p>
                     <p>
                         I believe that my experiences have given me a great contribution in teamwork, and also in team direction, and in the importance of managing time and meeting deadlines. As well in the practice of constant training and knowledge updating.
                     </p>
+                    <p>Check out my <a href="https://www.linkedin.com/in/aalejof/" target="_blank"><b>LinkedIn</b></a> and <a href="https://github.com/AAlejof" target="_blank"><b>Github</b></a> profiles!</p>
                 </div>
             </div>
             <Projects/>
