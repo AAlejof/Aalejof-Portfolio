@@ -5,12 +5,25 @@ import image2 from '../../assets/img/imgHeliki2.png';
 import image3 from '../../assets/img/imgHeliki3.png';
 import image4 from '../../assets/img/imgHeliki4.png';
 import image5 from '../../assets/img/imgHeliki5.png';
+import img1 from '../../assets/img/imgCW1.png';
+import img2 from '../../assets/img/imgCW2.png';
+import img3 from '../../assets/img/imgCW3.png';
+import img4 from '../../assets/img/imgCW4.png';
+import img5 from '../../assets/img/imgCW5.png';
+import imgC1 from '../../assets/img/imgComplex1.png';
+import imgC2 from '../../assets/img/imgComplex2.png';
+import imgC3 from '../../assets/img/imgComplex3.png';
+import imgC4 from '../../assets/img/imgComplex4.png';
+import imgC5 from '../../assets/img/imgComplex5.png';
+
 
 const Projects = () => {
     const [selectedTitle, setSelectedTitle] = useState("WWII Comfort Women");
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    const images = [image1, image2, image3, image4, image5];
+    const imgWedApp = [image1, image2, image3, image4, image5];
+    const imgCWApp = [img1, img2, img3, img4, img5];
+    const imgComplex = [imgC1, imgC2, imgC3, imgC4, imgC5];
 
     const textData = [
         {
@@ -26,8 +39,11 @@ const Projects = () => {
             ),
             img: (
                 <>
-                    <p>Las víctimas pertenecieron a las colonias japonesas y a todos los territorios ocupados por Japón en el marco de la guerra. Se aplicaron diferentes mecanismos de rapto. Muchas víctimas fueron reclutadas con falsas promesas de trabajo, especialmente en el caso de las mujeres de las colonias japonesas. En algunos pocos casos fueron entregadas por vecinos o familiares. En la medida que la guerra avanzaba, muchas mujeres fueron directamente raptadas delante de sus familiares, conocidos, amigos o compañeros. Entre las víctimas japonesas se han descubierto casos de prostitutas derivabas a los sitios de esclavización sexual. Las “mujeres de confort” eran jóvenes. La mayoría eran vírgenes al momento del rapto. Se estima que las víctimas tenían entre 11 y 27 años. En todos los casos fueron sometidas a un control total de sus cuerpos mediante el uso de la violencia física y psicológica.</p>
-                </>)
+                    <div className={style.carouselContainer}>
+                        <img className={style.descImg} src={imgCWApp[currentImageIndex]} alt="ComfortWomen app img" />
+                    </div>
+                </>
+            )
         },
         {
             title: "Wedding RSVP app",
@@ -42,9 +58,10 @@ const Projects = () => {
             img: (
                 <>
                     <div className={style.carouselContainer}>
-                        <img className={style.descImg} src={images[currentImageIndex]} alt="Mujeres de confort" />
+                        <img className={style.descImg} src={imgWedApp[currentImageIndex]} alt="Wedding app img" />
                     </div>
-                </>)
+                </>
+            )
         },
         {
             title: "Complex gym",
@@ -57,16 +74,19 @@ const Projects = () => {
             ),
             img: (
                 <>
-                    <p>A partir de la invasión de Manchuria en 1931, el Imperio japonés inicia una etapa de avance militar en Asia que finalizará con el discurso de rendición del emperador de japón, Hirohito, el 14 de agosto de 1945. Al iniciarse el conflicto armado, la Armada Imperial observa que los soldados contraían enfermedades de trasmisión sexual. La Armada consideró que estas enfermedades era el producto de las violaciones masivas de mujeres y la concurrencia de los soldados a prostíbulos de la zona. Para prevenir las enfermedades de trasmisión sexual y controlar la salud de los soldados, decide establecer el sistema de las “mujeres de confort”. Este sistema le permitía controlar la salud de los soldados y de las mujeres esclavizadas sexualmente.</p>
-                    <p>Otro de los motivos por los cuales se establece este sistema fue mejorar la moral de los soldados. Frente a las continuas batallas y el estrés de la guerra, creían que expandir los lugares de “entretenimiento sexual” sería fundamental para mejorar la salud mental de soldados. Además, este sistema permitiría evitar los raptos masivos de mujeres que no sólo ponían en peligro la salud de los soldados, sino que también aumentaba el sentimiento antijaponés en los territorios ocupados. Desde esta perspectiva patriarcal, las mujeres fueron consideradas un objeto sexual de confort, consuelo y bienestar de los hombres de la Armada Imperial.</p>
-                    <p>Se han encontrado diversos documentos que prueban la existencia de este sistema de esclavización sexual. Entre las diversas fuentes existentes se destacan un escrito publicado en julio de 1938 en el periódico de guerra de la Novena Brigada Terrestre en el cual se solicitan más estaciones de confort para mejorar el ánimo de los soldados. Se han encontrado menciones a las “mujeres de confort” en certificados de viaje y otros documentos oficiales de la Armada Imperial. También hay varios testimonios de testigos locales y de soldados y médicos arrepentidos que corroboran la existencia de esta de red de trata. Como las investigaciones continúan, siguen apareciendo documentos e imágenes de archivo probatorias.</p>
-                </>)
+                    <>
+                        <div className={style.carouselContainer}>
+                            <img className={style.descImg} src={imgComplex[currentImageIndex]} alt="Complex app img" />
+                        </div>
+                    </>
+                </>
+            )
         },
 
     ];
 
     const nextImage = () => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % (imgCWApp, length || imgWedApp.length || imgComplex.length));
     };
 
     useEffect(() => {
@@ -74,21 +94,6 @@ const Projects = () => {
 
         return () => clearInterval(interval);
     }, []);
-
-    const prevImage = () => {
-        setCurrentImageIndex((prevIndex) =>
-            prevIndex === 0 ? images.length - 1 : prevIndex - 1
-        );
-    };
-
-    const nextManualImage = () => {
-        nextImage();
-    };
-
-    const prevManualImage = () => {
-        prevImage();
-    };
-
 
 
     return (
@@ -118,19 +123,14 @@ const Projects = () => {
                             </>
                         ))}
                     </div>
-                    {
-                        (selectedTitle === "Testimonios") ?
-                            <div className={style.contentDiv}><Card /><Card /><Card /></div> :
-
-                            <div className={style.contentDiv}>
-                                <div className={style.summaryDiv}>
-                                    {textData.find(item => item.title === selectedTitle)?.summary}
-                                </div>
-                                <div className={style.textDiv}>
-                                    {textData.find(item => item.title === selectedTitle)?.img}
-                                </div>
-                            </div>
-                    }
+                    <div className={style.contentDiv}>
+                        <div className={style.summaryDiv}>
+                            {textData.find(item => item.title === selectedTitle)?.summary}
+                        </div>
+                        <div className={style.textDiv}>
+                            {textData.find(item => item.title === selectedTitle)?.img}
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
