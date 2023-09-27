@@ -10,26 +10,26 @@
         align-items: center;
         width: 100vw;
         margin-top: 15vh;
-        margin-bottom: 5vh;
     }
 
     h2 {
         font-family: 'Montserrat';
-        font-size: 25px;
-        text-align: left;
+        font-size: 35px;
+        text-align: center;
         color: #000000;
-        font-weight: 700;
-        width: 85vw;
+        font-weight: 800;
+        width: 60vw;
     }
 
     .mainP {
         font-family: 'Montserrat';
-        font-size: 18px;
+        font-size: 16px;
         text-align: left;
         color: #666666;
         font-weight: 400;
-        width: 85vw;
-        margin: 3%;
+        width: 80vw;
+        margin-bottom: 5vh; 
+        
     }
 }
 

@@ -43,26 +43,27 @@
         position: fixed;
         top: 0;
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-        align-content: flex-end;
-        height: 101.33px;
+        align-items: center;
+        height: 15vh;
         width: 100vw;
         background-color: white;
         border-bottom: solid 0.5px #a4a4a4;
+        z-index: 5;
     }
 
     .pNavbarDiv {
         height: 43.33px;
-        font-family: 'Open Sans';
+        color: #000;
+        font-family: 'Montserrat';
+        font-size: 45px;
         font-style: normal;
-        font-weight: 400;
-        font-size: 40px;
-        line-height: 20px;
+        font-weight: 900;
+        line-height: normal;
+        letter-spacing: -0.2px;
         display: flex;
         align-items: center;
         text-align: center;
-        letter-spacing: -0.2px;
     }
 
     a {

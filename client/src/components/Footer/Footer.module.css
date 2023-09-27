@@ -39,28 +39,25 @@
 @media (max-width: 450px) {
     .footerDiv {
         margin: 0;
-        position: fixed;
-        bottom: 0;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: flex-end;
-        height: 101.33px;
+        justify-content: space-around;
         width: 100vw;
         background-color: white;
-        border-bottom: solid 0.5px #a4a4a4;
+        border-top: solid 0.5px #a4a4a4;
     }
 
     .pFooterDiv {
-        height: 43.33px;
+        height: 60px;
+        color: #000000;
+        font-family: 'Montserrat';
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
-        font-size: 40px;
-        line-height: 20px;
+        line-height: normal;
+        letter-spacing: -0.2px;
         display: flex;
         align-items: center;
         text-align: center;
-        letter-spacing: -0.2px;
     }
 
     a {
