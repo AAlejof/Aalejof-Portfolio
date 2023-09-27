@@ -149,6 +149,7 @@
         padding: 5%;
         padding-top: 0;
         text-align: left;
+        min-height: 55vh;
     }
 
     .summaryDiv {
